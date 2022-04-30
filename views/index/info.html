@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>个人博客</title>
+<link href="/static/index/css/base.css" rel="stylesheet">
+<link rel="icon" href="/static/index/images/zlkt.ico" type="image/x-icon"/>
+<link rel="stylesheet" href="/static/index/css/app-4.9.css">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<script src="/static/index/js/jquery.js"></script>
+<script src="/static/index/js/nav.js"></script>
+
+</style>
+</head>
+<body>
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html" class="current">首页</a></li>
+      <li><a href="#">python</a></li>
+      <li><a href="#">golang</a></li>
+      <li><a href="#">java</a></li>
+      <li><a href="#">c++</a></li>
+      <li><a href="#">关于博主</a></li>
+    </ul>
+  </nav>
+</header>
+<!--header end-->
+<main>
+  <p class="weizhi">您现在的位置是：
+    <a href="/" target="_blank">首页</a>><a href="/" target="_blank">帖子详情</a>
+  </p>
+  <article>
+    <div class="container">
+      <h1>  {{.article.Name}}</h1>
+      <p class="blog_info">
+        <span>2020-04-02</span>
+        <span>作者</span>
+        <span>
+          <a href="/" target="_blank">golang</a>
+        </span>
+        <span>1399</span>
+        <span>1200</span>
+      </p>
+      <div class="tags">
+        <a href="" target="_blank">go</a> &nbsp;
+        <a href="" target="_blank">golang</a> &nbsp;
+      </div>
+
+      <div class="content"> 
+         {{.article.Content}}
+      </div>
+      
+      <br>
+      <br>
+      <div class="pinglun_box">
+        
+        <h2>文章评论</h2>
+
+        <div class="bottom-area">
+          <div id="comments" class="comments-area">
+              <ol class="comment-list">
+
+                  <li id="comment-20" class="comment even thread-even depth-1 parent">
+
+                      <!-- 一级评论 -->
+                      <article id="div-comment-20" class="comment-wrapper u-clearfix"
+                          itemscope="" itemtype="https://schema.org/Comment">
+                          <!-- 头像 -->
+                          <div class="comment-author-avatar">
+                              <img alt='' src='images/bq5.png' class='avatar avatar-96 photo'>
+                          </div>
+                          
+                          <div class="comment-content">
+                              <!-- 作者 -->
+                              <div class="comment-author-name vcard" itemprop="author">
+                                  <cite class="fn">
+                                    <a href='javascript:;' rel='external nofollow' class='url'>
+                                亮仔
+                                    </a>
+                                  </cite> 
+                              </div>
+                              <!-- 时间 -->
+                              <div class="comment-metadata">
+                                  <time datetime="2019-11-02T16:46:39+08:00"
+                                      itemprop="datePublished">
+                                      2020-11-02 14:34:23
+                                    </time>
+
+                                    <span style="margin-left: 520px;">
+                                      <a style="cursor: pointer;" classs="reply">回复</a>
+                                    </span> 
+                              </div>
+
+                              <!-- 评论内容 -->
+                              <div class="comment-body" itemprop="comment">
+                                  <p>自由发挥</p>
+                              </div>
+
+                          </div>
+                      </article>
+
+                      <!-- 二级评论 -->
+                      <ol class="children">
+                          <li class="comment byuser comment-author-aliwen bypostauthor odd alt depth-2">
+                              <article class="comment-wrapper u-clearfix">
+                                  <!-- 头像 -->
+                                  <div class="comment-author-avatar vcard">
+                                      <img alt='' src='images/bq3.png'  class='lazyload avatar avatar-96 photo ' 
+                                      height='96' width='96'> 
+                                  </div>
+
+                                  <div class="comment-content">
+                                      <!-- 作者 -->
+                                      <div class="comment-author-name vcard"
+                                          itemprop="author">
+                                          <cite class="fn">
+                                              亮仔
+                                          </cite> 
+                                      </div>
+                                      <!-- 时间 -->
+                                      <div class="comment-metadata">
+                                          <time datetime="2019-11-08T16:36:35+08:00"
+                                              itemprop="datePublished">
+                                              2020-11-03 14:34:23
+                                            </time>
+                                      </div>
+                                      <!-- 内容 -->
+                                      <div class="comment-body" itemprop="comment">
+                                          <p>自由发挥吧我就不写了</p>
+                                      </div>
+
+                                  </div>
+                              </article>
+                          </li>
+                      </ol>
+                  </li>
+              </ol>
+
+              <div class="comment-respond">
+                  <form action="" method="post" class="comment-form" >
+                    
+                    <p style="comment-form-comment">
+                      <textarea id="comment" name="comment"
+                            rows="8" aria-required="true"></textarea>
+                    </p>
+                    <p class="form-submit">
+                      <input name="submit" type="submit" id="submit"
+                            class="button" value="发表评论">
+                    </p>
+              
+                  </form>
+              </div>
+          </div>
+      </div>
+      
+      </div>
+
+    </div>
+  </article>
+  <!--article end-->
+  
+  <aside>
+    
+    <div class="paihang">
+      <h2 class="aside_title">热门帖子</h2>
+      <ol start="1">
+        <li>
+          <a href="/" target="_blank">
+            坚持就是胜利（需要完善）
+          </a>
+        </li>
+      </ol>
+    </div>
+    <div class="links">
+      <h2 class="aside_title">友情链接</h2>
+      <ul>
+        <li><a href="https://www.baidu.com/" target="_blank">百度</a></li>
+      </ul>
+    </div>
+  </aside>
+  <!--aside end--> 
+</main>
+<footer>
+  <p> © 2017-2020 版权所有</p>
+</footer>
+<!--footer end-->
+</body>
+</html>

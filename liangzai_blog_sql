@@ -1,0 +1,25 @@
+//账户
+CREATE TABLE `user` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT COMMENT '用户ID',
+  `name` varchar(128) DEFAULT '' COMMENT '姓名',
+  `password` varchar(32) NOT NULL,
+  `sex` tinyint(1) unsigned NOT NULL DEFAULT '1' COMMENT '1男2女',
+  `mobile` varchar(11) DEFAULT '0' COMMENT '手机号',
+  `email` varchar(128) DEFAULT '' COMMENT '邮箱',
+  `address` varchar(500) DEFAULT '' COMMENT '地址',
+  `status` tinyint(1) NOT NULL DEFAULT '1' COMMENT '1、启用 2、禁用',
+  `create_time` int(11) NOT NULL DEFAULT '0',
+  `update_time` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=utf8mb4;
+
+//文章
+CREATE TABLE `article` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(128) NOT NULL COMMENT '标题',
+  `content` text NOT NULL COMMENT '内容',
+  `create_time` int(10) unsigned NOT NULL DEFAULT '0',
+  `update_time` int(10) unsigned NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4;
+
